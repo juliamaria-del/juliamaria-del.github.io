@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Multimídia — Cap. 4 / Ativ. 4</title>
+</head>
+<body>
+
+    <header>
+        <h1>Recursos Multimídia</h1>
+        <p>Página de demonstração de mídias em HTML5.</p>
+    </header>
+
+    <main>
+
+        <!-- BLOCO 1 - VÍDEO -->
+        <figure>
+            <video 
+                controls 
+                width="800" 
+                height="450"
+                poster="poster-aula.jpg"
+                preload="metadata">
+
+                <source src="videos/aula-html.mp4" type="video/mp4">
+                <source src="videos/aula-html.webm" type="video/webm">
+
+                <track 
+                    src="legendas/aula-html.vtt"
+                    kind="subtitles"
+                    srclang="pt"
+                    label="Português"
+                    default>
+
+                <p>
+                    <a href="videos/aula-html.mp4">Clique aqui para baixar o vídeo.</a>
+                </p>
+
+            </video>
+
+            <figcaption>
+                Vídeo introdutório sobre HTML5 e recursos multimídia. 
+                Fonte: Curso de Desenvolvimento Web.
+            </figcaption>
+        </figure>
+
+        <hr>
+
+        <!-- BLOCO 2 - ÁUDIO -->
+        <figure>
+
+            <audio controls preload="metadata">
+
+                <source src="audios/podcast-html.mp3" type="audio/mpeg">
+                <source src="audios/podcast-html.ogg" type="audio/ogg">
+
+                <p>
+                    Seu navegador não suporta áudio HTML5.
+                    <a href="audios/podcast-html.mp3">Clique aqui para baixar o áudio.</a>
+                </p>
+
+            </audio>
+
+            <figcaption>
+                Podcast: Introdução ao HTML5 —
+                <a href="transcricao.html">Ler transcrição</a>
+            </figcaption>
+
+        </figure>
+
+        <hr>
+
+        <!-- BLOCO 3 - IFRAME YOUTUBE -->
+        <figure>
+
+            <iframe>
+                width="800"
+                height="450" <a>
+                src="https://youtu.be/OxTNN-IKcEQ?si=z9fvujt28ihE2aIP"
+                title="Guia completo de interpretação textual"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+	       </a>
+            </iframe>
+
+            <figcaption>
+                Vídeo educacional sobre interpretação de texto.
+                Canal: Português sem Enrolação - Professora Lis.
+ 			Plataforma: YouTube.
+            </figcaption>
+
+        </figure>
+
+        <hr>
+
+        <!-- BLOCO 4 - PICTURE -->
+        <figure>
+
+            <picture>
+
+                <source 
+                    media="(min-width: 768px)"
+                    srcset="img/banner-wide.jpg">
+
+                <img 
+                    src="img/banner-mobile.jpg"
+                    alt="Banner ilustrando recursos multimídia em HTML5"
+                    width="800"
+                    height="400">
+
+            </picture>
+
+            <figcaption>
+                Banner responsivo representando os recursos multimídia do ambiente virtual.
+            </figcaption>
+
+        </figure>
+
+    </main>
+
+    <footer>
+        <p>
+            Nome: Júlia Maria Vieira da Silva <br>
+            Matrícula: 2026321210 <br>
+            Data: 12/05/2026
+        </p>
+    </footer>
+ 	  <p><a href="index.html">← Voltar à página principal</a></p>
+</body>
+</html>
