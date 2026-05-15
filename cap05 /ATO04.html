@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PWEB1 — Cap. 05 — AT04 — Semana de Tecnologia IFAL</title>
+</head>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 750px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .nota {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"],
+    input[type="range"],
+    input[type="color"],
+    input[type="file"] {
+      width: auto;
+    }
+
+    small {
+      color: #666;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Semana de Tecnologia IFAL</h1>
+    <p><a href="index.html">← Voltar para a página principal</a></p>
+  </header>
+
+	<main>
+
+<form action="https://httpbin.org/post" method="POST" enctype="multipart/form-data">
+
+  <h1>Semana de Tecnologia IFAL</h1>
+  <div class="nota">* Campos obrigatórios</div>
+
+  <!-- IDENTIFICAÇÃO -->
+  <fieldset>
+    <legend>Identificação do participante</legend>
+
+    <label for="nome">Nome completo *</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail institucional *</label>
+    <input type="email" id="email" name="email" required autocomplete="email">
+
+    <label for="cidade">Cidade de origem</label>
+    <input list="cidades" id="cidade" name="cidade">
+
+    <datalist id="cidades">
+      <option value="Maceió">
+      <option value="Arapiraca">
+      <option value="Palmeira dos Índios">
+      <option value="Rio Largo">
+      <option value="Penedo">
+      <option value="União dos Palmares">
+      <option value="São Miguel dos Campos">
+      <option value="Maragogi">
+    </datalist>
+
+    <label for="foto">Foto para crachá</label>
+    <input type="file" id="foto" name="foto" accept="image/jpeg,image/png">
+    <small>Formatos aceitos: JPG e PNG. Tamanho máximo: 2 MB.</small>
+
+  </fieldset>
+
+  <!-- PREFERÊNCIAS -->
+  <fieldset>
+    <legend>Preferências para o evento</legend>
+
+    <label for="chegada">Data e hora de chegada</label>
+    <input type="datetime-local" id="chegada" name="chegada">
+
+    <label for="experiencia">
+      Nível de experiência: <span id="valor-experiencia">5</span>/10
+    </label>
+
+    <input type="range"
+      id="experiencia"
+      name="experiencia"
+      min="0" max="10" step="1" value="5"
+      oninput="document.getElementById('valor-experiencia').textContent = this.value">
+
+    <label for="cor">Cor da camiseta</label>
+    <input type="color" id="cor" name="cor_camiseta" value="#1a73e8">
+
+    <label for="oficinas">Oficinas de interesse</label>
+    <select id="oficinas" name="oficinas[]" multiple size="4">
+      <option>Desenvolvimento Web</option>
+      <option>Banco de Dados</option>
+      <option>Inteligência Artificial</option>
+      <option>Segurança da Informação</option>
+      <option>Infraestrutura</option>
+    </select>
+
+    <small>Use Ctrl (ou Cmd no Mac) para selecionar mais de uma oficina.</small>
+
+  </fieldset>
+
+  <!-- OCULTO -->
+  <input type="hidden" name="edicao" value="2026">
+
+  <!-- BOTÃO -->
+  <button type="submit">Confirmar inscrição</button>
+
+</form>
+
+<script>
+  document.getElementById('data_fake')?.setAttribute('max', new Date().toISOString().split('T')[0]);
+</script>
+
+	</main>
+
+</body>
+</html>
