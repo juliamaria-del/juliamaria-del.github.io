@@ -85,13 +85,13 @@ h4 {
 }
 
 .lista {
-  color: #005B62;
   max-width: 600px;
   margin-left: 2rem;
   margin-right: 2rem;
   margin-top: 0.2rem;
   font-size: 1.3rem;
   text-align: left;
+   color: #005B62;
 }
 
 p {
