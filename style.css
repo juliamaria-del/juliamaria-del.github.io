@@ -7,12 +7,12 @@
 
 /* ---- Cores e fonte (mude à vontade) ---- */
 :root {
-  --cor: #640b80;
-  --cor-escura: #781491;
+  --cor: #46055a;
+  --cor-escura: #270230;
   --texto: #0c0c0c;
   --suave: #7b2894;
-  --fundo: #e8b4fc;
-  --superficie: #cb79e4;
+  --fundo: #d98cf8;
+  --superficie: #bb62f7;
   --borda: #6b0c66;
   --raio: 20px;
 }
